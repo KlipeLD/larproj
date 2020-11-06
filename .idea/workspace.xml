@@ -125,6 +125,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/lavary/laravel-menu" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jmZ6OrHSf4jOPEL0SmrSGtiU25" />
@@ -154,7 +155,7 @@
       <updated>1604411063933</updated>
       <workItem from="1604411068552" duration="501000" />
       <workItem from="1604411729569" duration="313000" />
-      <workItem from="1604508308183" duration="666000" />
+      <workItem from="1604508308183" duration="10978000" />
     </task>
     <servers />
   </component>
@@ -162,6 +163,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="346" y="337" key="NewPhpFileDialog" timestamp="1604663147024">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="346" y="337" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1604663147024" />
     <state x="141" y="0" key="SettingsEditor" timestamp="1604411166487">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
