@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $item = DB::table('main_menu')->get();
+    $name = request('name');
     return view('welcome',compact('item'));
 });
 
@@ -22,8 +23,10 @@ Route::get('articles', function () {
     return view('articles');
 });
 
-Route::get('articles/{{slug}}', function ($id) {
-    $slug = DB::table('articles')->find($id);
-    dd($slug);
-    return view('articles',compact('slug'));
+Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show');
+
+Route::get('about', function () {
+    return view('about', [
+        'articles' => App\Models\Articles::take(3)->latest()->get()
+    ]);
 });

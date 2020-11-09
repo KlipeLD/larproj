@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic);
+@import url("font-awesome.min.css");
+
+
+* {
+    box-sizing: border-box;
+}
+
+/**
+ * Максимальная высота базового контейнера
+ */
+html {
+    font-size: 100%;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+ol, ul
+{
+    list-style: none;
+}
+body {
+    color: #333;
+    font: 1em 'Open Sans', sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* Меню */
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+.top-menu {
+    position: relative;
+    background: rgba(24, 116, 205, 0.58);
+}
+.menu-main {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu-main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.left-item {float: left;}
+.right-item {float: right;}
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.menu-main a {
+    text-decoration: none;
+    display: block;
+    line-height: 65px;
+    padding: 0 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    color: white;
+    transition: .3s linear;
+}
+@media (max-width: 1420px)
+{
+    .navbar-logo {
+        display:none;
+    }
+}
+.menu-main a:hover {background: rgba(0,0,0,.3);}
+@media (max-width: 830px) {
+    .menu-main {
+        padding-top: 90px;
+        text-align: center;
+    }
+    .navbar-logo {
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+    }
+    .menu-main li {
+        float: none;
+        display: inline-block;
+    }
+    .menu-main a {
+        line-height: normal;
+        padding: 20px 15px;
+        font-size: 16px;
+    }
+}
+@media (max-width: 630px) {
+    .menu-main li {display: block;}
+}
