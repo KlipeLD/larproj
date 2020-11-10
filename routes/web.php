@@ -19,9 +19,7 @@ Route::get('/', function () {
     return view('welcome',compact('item'));
 });
 
-Route::get('articles', function () {
-    return view('articles');
-});
+Route::get('articles', 'App\Http\Controllers\PostsController@index');
 
 Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show');
 

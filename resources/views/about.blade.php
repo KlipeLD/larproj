@@ -16,8 +16,10 @@
             <ul class="style1">
             @foreach ($articles as $article)
                 <li class="first">
-                    <h3>{{$article->slug}}</h3>
-                    <p><a href="#">{{$article->short_body}}.</a></p>
+                    <h3>
+                    <a href="/articles/{{$article->id}}">{{$article->slug}}</a>
+                    </h3>
+                    <p><a href="/articles/{{$article->id}}">{{$article->short_body}}.</a></p>
                 </li>
             @endforeach
             </ul>

@@ -9,12 +9,20 @@ use App\Models\Articles;
 
 class PostsController extends Controller
 {
-    public function show($slug)
+    public function show($articleId)
     {
-        $post = Articles::where('slug', $slug)->firstorFail();
+        $article = Articles::find($articleId);
+       // $post = Articles::where('slug', $slug)->firstorFail();
 
-        return view('post',[
-            'post' => $post
-        ]);
+        //return view('post',[
+        //    'post' => $post
+        //]);
+        return view('articles.show',['article' =>$article]);
+    }
+
+    public function index()
+    {
+        $articles = Articles::latest()->get();
+        return view('articles.index',['articles' =>$articles]);
     }
 }
