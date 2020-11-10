@@ -9,10 +9,10 @@ use App\Models\Articles;
 
 class PostsController extends Controller
 {
-    public function show($articleId)
+    public function show(Articles $post)
     {
-        $article = Articles::find($articleId);
-        return view('articles.show',['article' =>$article]);
+        //$article = Articles::findorFail($articleId);
+        return view('articles.show',['article' =>$post]);
     }
 
     public function index()
@@ -23,54 +23,41 @@ class PostsController extends Controller
 
     public function create()
     {
-        //$articles = Articles::latest()->get();
         return view('articles.create');
     }
 
     public function store()
     {
-        request()->validate([
-            'title'=> ['required','min:3','max:255'],
-            'short_body' => ['required'],
-            'body' => ['required']
-        ]);
-       $article = new Articles();
-       $article->title = request('title');
-       $article->slug = request('title');
-       $article->user_id = '1';
-       $article->short_body = request('excerpt');
-       $article->body = request('body');
-       $article->save();
+        Articles::create($this->validateArticles());
 
        return redirect('/articles');
     }
 
-    public function edit($articleId)
+    public function edit(Articles $post)
     {
-        $article = Articles::find($articleId);
-        return view('articles.edit',['article' =>$article]);
+        //$article = Articles::findorFail($articleId);
+        return view('articles.edit',['article' =>$post]);
     }
 
-    public function update($articleId)
+    public function update(Articles $post)
     {
-        request()->validate([
-            'title'=> ['required','min:3','max:255'],
-            'short_body' => ['required'],
-            'body' => ['required']
-        ]);
-        $article = Articles::find($articleId);
-        $article->title = request('title');
-        $article->slug = request('title');
-        $article->user_id = '1';
-        $article->short_body = request('excerpt');
-        $article->body = request('body');
-        $article->save();
-        return redirect('/articles/'. $article->id);
+        $post->update($this->validateArticles());
+
+        return redirect('/articles/'. $post->id);
     }
 
     public function destroy()
     {
         $articles = Articles::latest()->get();
         return view('articles.index',['articles' =>$articles]);
+    }
+
+    protected function validateArticles()
+    {
+        request()->validate([
+            'title'=> ['required','min:3','max:255'],
+            'short_body' => ['required'],
+            'body' => ['required']
+        ]);
     }
 }

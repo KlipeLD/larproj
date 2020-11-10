@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Articles extends Model
 {
-    use HasFactory;
+    public function getRouteKeyName()
+    {
+        return parent::getRouteKeyName();
+    }
+        protected  $guarded =[];
+
+    //use HasFactory;
 }
