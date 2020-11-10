@@ -43,7 +43,7 @@ class PostsController extends Controller
     {
         $post->update($this->validateArticles());
 
-        return redirect('/articles/'. $post->id);
+        return redirect($post->path());
     }
 
     public function destroy()

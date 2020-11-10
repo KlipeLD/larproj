@@ -7,11 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Articles extends Model
 {
-    public function getRouteKeyName()
+    /*public function getRouteKeyName()
     {
         return parent::getRouteKeyName();
-    }
-        protected  $guarded =[];
+    }*/
+    protected  $guarded =[];
 
+    public function path()
+    {
+        return route('articles.show',$this);
+    }
     //use HasFactory;
 }
