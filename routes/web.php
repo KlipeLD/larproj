@@ -20,8 +20,11 @@ Route::get('/', function () {
 });
 
 Route::get('articles', 'App\Http\Controllers\PostsController@index');
-
+Route::post('/articles', 'App\Http\Controllers\PostsController@store');
+Route::get('/articles/create', 'App\Http\Controllers\PostsController@create');
 Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show');
+
+
 
 Route::get('about', function () {
     return view('about', [

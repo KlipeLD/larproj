@@ -25,4 +25,42 @@ class PostsController extends Controller
         $articles = Articles::latest()->get();
         return view('articles.index',['articles' =>$articles]);
     }
+
+    public function create()
+    {
+        //$articles = Articles::latest()->get();
+        return view('articles.create');
+    }
+
+    public function store()
+    {
+       $article = new Articles();
+       $article->title = request('title');
+       $article->slug = request('title');
+        $article->user_id = '1';
+       $article->short_body = request('excerpt');
+       $article->body = request('body');
+
+       $article->save();
+
+       return redirect('/articles');
+    }
+
+    public function edit()
+    {
+        $articles = Articles::latest()->get();
+        return view('articles.index',['articles' =>$articles]);
+    }
+
+    public function update()
+    {
+        $articles = Articles::latest()->get();
+        return view('articles.index',['articles' =>$articles]);
+    }
+
+    public function destroy()
+    {
+        $articles = Articles::latest()->get();
+        return view('articles.index',['articles' =>$articles]);
+    }
 }
