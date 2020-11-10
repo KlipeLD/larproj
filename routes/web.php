@@ -19,10 +19,12 @@ Route::get('/', function () {
     return view('welcome',compact('item'));
 });
 
-Route::get('articles', 'App\Http\Controllers\PostsController@index');
+Route::get('/articles', 'App\Http\Controllers\PostsController@index');
 Route::post('/articles', 'App\Http\Controllers\PostsController@store');
 Route::get('/articles/create', 'App\Http\Controllers\PostsController@create');
 Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show');
+Route::get('/articles/{post}/edit', 'App\Http\Controllers\PostsController@edit');
+Route::put('/articles/{post}', 'App\Http\Controllers\PostsController@update');
 
 
 

@@ -12,11 +12,6 @@ class PostsController extends Controller
     public function show($articleId)
     {
         $article = Articles::find($articleId);
-       // $post = Articles::where('slug', $slug)->firstorFail();
-
-        //return view('post',[
-        //    'post' => $post
-        //]);
         return view('articles.show',['article' =>$article]);
     }
 
@@ -37,25 +32,30 @@ class PostsController extends Controller
        $article = new Articles();
        $article->title = request('title');
        $article->slug = request('title');
-        $article->user_id = '1';
+       $article->user_id = '1';
        $article->short_body = request('excerpt');
        $article->body = request('body');
-
        $article->save();
 
        return redirect('/articles');
     }
 
-    public function edit()
+    public function edit($articleId)
     {
-        $articles = Articles::latest()->get();
-        return view('articles.index',['articles' =>$articles]);
+        $article = Articles::find($articleId);
+        return view('articles.edit',['article' =>$article]);
     }
 
-    public function update()
+    public function update($articleId)
     {
-        $articles = Articles::latest()->get();
-        return view('articles.index',['articles' =>$articles]);
+        $article = Articles::find($articleId);
+        $article->title = request('title');
+        $article->slug = request('title');
+        $article->user_id = '1';
+        $article->short_body = request('excerpt');
+        $article->body = request('body');
+        $article->save();
+        return redirect('/articles/'. $article->id);
     }
 
     public function destroy()
