@@ -11,11 +11,16 @@ class Articles extends Model
     {
         return parent::getRouteKeyName();
     }*/
+    use HasFactory;
     protected  $guarded =[];
 
     public function path()
     {
         return route('articles.show',$this);
     }
-    //use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

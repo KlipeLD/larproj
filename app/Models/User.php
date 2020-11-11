@@ -11,6 +11,14 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    public function articles()
+    {
+        return $this->hasMany(Articles::class);
+    }
+    public function project()
+    {
+        return $this->hasMany(Project::class);
+    }
     /**
      * The attributes that are mass assignable.
      *

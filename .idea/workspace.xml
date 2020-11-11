@@ -126,6 +126,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/lavary/laravel-menu" />
+      <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jmZ6OrHSf4jOPEL0SmrSGtiU25" />
@@ -161,7 +162,7 @@
       <updated>1604411063933</updated>
       <workItem from="1604411068552" duration="501000" />
       <workItem from="1604411729569" duration="313000" />
-      <workItem from="1604508308183" duration="52465000" />
+      <workItem from="1604508308183" duration="59968000" />
     </task>
     <servers />
   </component>
