@@ -23,4 +23,9 @@ class Articles extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tags::class)->withTimestamps();
+    }
 }

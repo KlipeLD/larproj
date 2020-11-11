@@ -17,20 +17,34 @@ class PostsController extends Controller
 
     public function index()
     {
-        $articles = Articles::latest()->get();
+        if(request('tag'))
+        {
+            $articles = \App\Models\Tags::where('name', request('tag'))->firstOrFail()->articles;
+            //return $articles;
+        }
+        else
+        {
+            $articles = \App\Models\Articles::latest()->get();
+        }
         return view('articles.index',['articles' =>$articles]);
     }
 
     public function create()
     {
-        return view('articles.create');
+        $tags = \App\Models\Tags::all();
+
+        return view('articles.create',['tags'=>\App\Models\Tags::all()]);
     }
 
     public function store()
     {
-        Articles::create($this->validateArticles());
-
-       return redirect('/articles');
+        $this->validateArticles();
+        $article =  new Articles(request(['title', 'short_body', 'body']));
+        $article->user_id = 1;
+        $article->slug = 'hgvfcdxsfdgcv';
+        $article->save();
+        $article->tags()->attach(request('tags'));
+       return redirect(route('articles.index'));
     }
 
     public function edit(Articles $post)
@@ -57,7 +71,8 @@ class PostsController extends Controller
         request()->validate([
             'title'=> ['required','min:3','max:255'],
             'short_body' => ['required'],
-            'body' => ['required']
+            'body' => ['required'],
+            'tags' => 'exists:tags,id'
         ]);
     }
 }

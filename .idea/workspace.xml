@@ -137,12 +137,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/articles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/tags" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\larproj\resources\views\tags" />
       <recent name="C:\xampp\htdocs\larproj\resources\views\articles" />
     </key>
   </component>
@@ -162,7 +163,7 @@
       <updated>1604411063933</updated>
       <workItem from="1604411068552" duration="501000" />
       <workItem from="1604411729569" duration="313000" />
-      <workItem from="1604508308183" duration="59968000" />
+      <workItem from="1604508308183" duration="75467000" />
     </task>
     <servers />
   </component>

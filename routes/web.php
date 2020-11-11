@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome',compact('item'));
 });
 
-Route::get('/articles', 'App\Http\Controllers\PostsController@index');
+Route::get('/articles', 'App\Http\Controllers\PostsController@index')->name('articles.index');;
 Route::post('/articles', 'App\Http\Controllers\PostsController@store');
 Route::get('/articles/create', 'App\Http\Controllers\PostsController@create');
 Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show')->name('articles.show');

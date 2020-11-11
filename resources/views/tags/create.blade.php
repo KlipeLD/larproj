@@ -7,8 +7,8 @@
 @section('content')
     <div id="wrapper">
         <div id="page" class="container">
-            <H1 class="heading has-text-weight-bold is-size-4">New Article</H1>
-            <form method="post" action="/articles">
+            <H1 class="heading has-text-weight-bold is-size-4">New Tags</H1>
+            <form method="post" action="/tags">
                 @csrf
                 <div class="field">
                     <label class="label" for="title">Title</label>
@@ -37,19 +37,6 @@
                               name="body" id="body">{{old('body')}}</textarea>
                     @error('body')
                         <p class="help is-danger">{{$errors->first('body')}}</p>
-                    @enderror
-                </div>
-                <div class="field">
-                    <label class="label" for="short_body">Tags</label>
-                </div>
-                <div class="select is-multiple control">
-                <select name="tags[]" multiple>
-                    @foreach($tags as $tag)
-                        <option value="{{$tag->id}}">{{$tag->name}}</option>
-                    @endforeach
-                </select>
-                    @error('tags')
-                        <p class="help is-danger">{{message}}</p>
                     @enderror
                 </div>
                 <div class="field is-grouped">
