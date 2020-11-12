@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
@@ -137,7 +140,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/tags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel8" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -163,7 +167,9 @@
       <updated>1604411063933</updated>
       <workItem from="1604411068552" duration="501000" />
       <workItem from="1604411729569" duration="313000" />
-      <workItem from="1604508308183" duration="75467000" />
+      <workItem from="1604508308183" duration="76065000" />
+      <workItem from="1605132841342" duration="250000" />
+      <workItem from="1605133400650" duration="3352000" />
     </task>
     <servers />
   </component>
@@ -175,6 +181,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="409" y="140" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1604878237852" />
+    <state x="420" y="93" key="FileChooserDialogImpl" timestamp="1605133685550">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="420" y="93" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605133685550" />
+    <state width="1236" height="158" key="GridCell.Tab.0.bottom" timestamp="1605133097928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
+    <state width="1236" height="158" key="GridCell.Tab.0.center" timestamp="1605133097928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="158" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
+    <state width="1236" height="158" key="GridCell.Tab.0.left" timestamp="1605133097928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="158" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
+    <state width="1236" height="158" key="GridCell.Tab.0.right" timestamp="1605133097928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1236" height="158" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
     <state x="434" y="61" key="NewPhpClassDialog" timestamp="1604790453227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
