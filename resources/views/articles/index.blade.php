@@ -9,10 +9,10 @@
                         @forelse($articles as $article)
                             <li class="first">
                                 <h3>
-                                    <a href="{{$article->path()}}">{{$article->slug}}</a>
+                                    <a href="{{$article->path()}}">{{$article->title}}</a>
                                 </h3>
-                                <p><img src="images/banner.jpg" alt="" class="image image-full" /> </p>
-                                <p><a href="/articles/{{$article->id}}">{{$article->short_body}}.</a></p>
+                                <p><img src="/images/banner.jpg" alt="" class="image image-full" /> </p>
+                                <p><a href="/articles/{{$article->slug}}">{{$article->short_body}}.</a></p>
                             </li>
                         @empty
                             <p>No relevant articles yet</p>
@@ -21,6 +21,9 @@
                 </div>
             </div>
         </div>
+        @if(!request('tag'))
+        <p>{{ $articles->links() }}</p>
+        @endif
     </div>
 
 @endsection

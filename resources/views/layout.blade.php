@@ -16,6 +16,8 @@ Released   : 20140225
     <title></title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
     <link href="/css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
@@ -27,6 +29,9 @@ Released   : 20140225
 
 </head>
 <body>
+<div id="app">
+
+</div>
 <div id="header-wrapper">
     <div id="header" class="container">
         <div id="logo">
@@ -34,11 +39,8 @@ Released   : 20140225
         </div>
         <div id="menu">
             <ul>
-                <li class="{{Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/" accesskey="1" title="">Homepage</a></li>
-                <li><a href="#" accesskey="2" title="">Our Clients</a></li>
-                <li class="{{Request::path() === 'about' ? 'current_page_item' : ''}}"><a href="/about" accesskey="3" title="">About Us</a></li>
-                <li class="{{Request::path() === 'articles' ? 'current_page_item' : ''}}"><a href="/articles" accesskey="4" title="">Articles</a></li>
-                <li><a href="#" accesskey="5" title="">Contact Us</a></li>
+                <li class="{{Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/" accesskey="1" title="">Главная страница</a></li>
+                <li class="{{Request::path() === 'articles' ? 'current_page_item' : ''}}"><a href="/articles" accesskey="4" title="">Каталог статей</a></li>
             </ul>
         </div>
     </div>

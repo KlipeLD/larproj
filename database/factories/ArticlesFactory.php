@@ -21,12 +21,16 @@ class ArticlesFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->sentence;
+        $fakedate = $this->faker->date('Y-m-d','now');
         return [
             'user_id' => '1',
-            'title' => $this->faker->sentence,
-            'slug' => $this->faker->sentence,
+            'title' => $title,
+            'slug' => str_slug($title),
             'short_body' => $this->faker->sentence,
-            'body' => $this->faker->paragraph
+            'body' => $this->faker->paragraph,
+            'created_at' => $fakedate,
+            'updated_at' => $fakedate
         ];
     }
 }

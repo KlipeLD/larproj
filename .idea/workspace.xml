@@ -130,6 +130,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/lavary/laravel-menu" />
       <path value="$PROJECT_DIR$/vendor/laravel/legacy-factories" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jmZ6OrHSf4jOPEL0SmrSGtiU25" />
@@ -140,7 +142,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -169,7 +171,8 @@
       <workItem from="1604411729569" duration="313000" />
       <workItem from="1604508308183" duration="76065000" />
       <workItem from="1605132841342" duration="250000" />
-      <workItem from="1605133400650" duration="3352000" />
+      <workItem from="1605133400650" duration="10661000" />
+      <workItem from="1605226770947" duration="23316000" />
     </task>
     <servers />
   </component>
@@ -185,22 +188,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="420" y="93" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605133685550" />
-    <state width="1236" height="158" key="GridCell.Tab.0.bottom" timestamp="1605133097928">
+    <state width="1236" height="458" key="GridCell.Tab.0.bottom" timestamp="1605224608876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="158" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
-    <state width="1236" height="158" key="GridCell.Tab.0.center" timestamp="1605133097928">
+    <state width="1236" height="458" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605224608876" />
+    <state width="1236" height="458" key="GridCell.Tab.0.center" timestamp="1605224608876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="158" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
-    <state width="1236" height="158" key="GridCell.Tab.0.left" timestamp="1605133097928">
+    <state width="1236" height="458" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605224608876" />
+    <state width="1236" height="458" key="GridCell.Tab.0.left" timestamp="1605224608876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="158" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
-    <state width="1236" height="158" key="GridCell.Tab.0.right" timestamp="1605133097928">
+    <state width="1236" height="458" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605224608876" />
+    <state width="1236" height="458" key="GridCell.Tab.0.right" timestamp="1605224608876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1236" height="158" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605133097928" />
+    <state width="1236" height="458" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605224608876" />
     <state x="434" y="61" key="NewPhpClassDialog" timestamp="1604790453227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -213,6 +216,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604411166487" />
+    <state x="296" y="145" key="run.anything.popup" timestamp="1605394350755">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="296" y="145" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1605394350755" />
     <state x="303" y="1" key="search.everywhere.popup" timestamp="1604684322673">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

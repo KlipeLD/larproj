@@ -5,14 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Articles;
 
 class PostsController extends Controller
 {
-    public function show(Articles $post)
+    public function show($post)
     {
-        //$article = Articles::findorFail($articleId);
-        return view('articles.show',['article' =>$post]);
+        $post1 = Articles::where('id', $post)
+            ->orWhere('slug', $post)
+           ->firstOrFail();
+        //$article = Articles::findorFail($post);
+        //$post = Articles::where('slug', $post)->first();
+        //return view('articles.show')->with('article', $post1);
+        //return view('articles.show',['article'=>$post1]);
+        return view('articles.show',['article' =>$post1]);
     }
 
     public function index()
@@ -20,11 +28,13 @@ class PostsController extends Controller
         if(request('tag'))
         {
             $articles = \App\Models\Tags::where('name', request('tag'))->firstOrFail()->articles;
-            //return $articles;
         }
         else
         {
-            $articles = \App\Models\Articles::latest()->get();
+            $articles = \App\Models\Articles::latest()
+                ->orderBy('created_at')
+                ->simplePaginate(6);
+           // $articles = \App\Models\Articles::latest()->get()->paginate(6);
         }
         return view('articles.index',['articles' =>$articles]);
     }
@@ -38,10 +48,11 @@ class PostsController extends Controller
 
     public function store()
     {
+        //$slug = Str::slug($name);
         $this->validateArticles();
         $article =  new Articles(request(['title', 'short_body', 'body']));
         $article->user_id = 1;
-        $article->slug = 'hgvfcdxsfdgcv';
+        $article->slug = str_slug(request('title'));
         $article->save();
         $article->tags()->attach(request('tags'));
        return redirect(route('articles.index'));
