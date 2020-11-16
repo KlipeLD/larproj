@@ -1,12 +1,26 @@
 @extends ('layout')
 
 @section ('content')
-    <div id="header-featured">
-        <div id="banner-wrapper">
-            <div id="banner" class="container">
-                <h2>Maecenas luctus lectus</h2>
-                <p>This is <strong>SimpleWork</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
-                <a href="#" class="button">Etiam posuere</a> </div>
+    <div id="wrapper">
+        <div id="page" class="container">
+            <div id="content">
+                <div id="sidebar2">
+                    <ul class="style1">
+                        @forelse($articles as $article)
+                            <li class="first">
+                                <h3>
+                                    <a href="{{$article->path()}}">{{$article->title}}</a>
+                                </h3>
+                                <p><img src="/images/banner-mini.jpg" alt="" class="image image-full" /> </p>
+                                <p><a href="/articles/{{$article->slug}}">{{$article->short_body}}.</a></p>
+                            </li>
+                        @empty
+                            <p>No relevant articles yet</p>
+                        @endforelse
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
+
 @endsection

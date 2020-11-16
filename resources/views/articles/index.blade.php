@@ -11,7 +11,7 @@
                                 <h3>
                                     <a href="{{$article->path()}}">{{$article->title}}</a>
                                 </h3>
-                                <p><img src="/images/banner.jpg" alt="" class="image image-full" /> </p>
+                                <p><img src="/images/banner-mini.jpg" alt="" class="image image-full" /> </p>
                                 <p><a href="/articles/{{$article->slug}}">{{$article->short_body}}.</a></p>
                             </li>
                         @empty

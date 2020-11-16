@@ -2,8 +2,14 @@
     <div id="wrapper">
         <div id="page" class="container">
             <H1 class="heading has-text-weight-bold is-size-3">Add your comment</H1>
-            <form method="post" action="/articles/{{$article->id}}">
+            <form method="post" id="contactform" action="/articles/{{$article->id}}">
                 @csrf
+                <div id="sendmessage">
+                    Ваш комментарий успешно отправлен.
+                </div>
+                <div id="senderror">
+                    При отправки комментария произошла ошибка.
+                </div>
                 <div class="field">
                     <label class="label" for="Subject">Subject</label>
                 </div>

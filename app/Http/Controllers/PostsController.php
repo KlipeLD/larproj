@@ -47,6 +47,16 @@ class PostsController extends Controller
         return view('articles.index',['articles' =>$articles]);
     }
 
+    public function indexMain()
+    {
+        $articles = \App\Models\Articles::latest()
+             ->Limit(6)
+             ->get();
+
+        return view('welcome',['articles' =>$articles]);
+       // return dd($articles);
+    }
+
     public function create()
     {
         $tags = \App\Models\Tags::all();
