@@ -28,4 +28,5 @@ class Articles extends Model
     {
         return $this->belongsToMany(Tags::class)->withTimestamps();
     }
+
 }

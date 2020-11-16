@@ -23,6 +23,9 @@ class PostsController extends Controller
             ->orderBy('created_at')
             ->simplePaginate(200);
         // $articles = \App\Models\Articles::latest()->get()->paginate(6);
+        $postId = $post1->id;
+        $post2 = Articles::findOrFail($postId);
+        event('postHasViewed', $post2);
 
         //$article = Articles::findorFail($post);
         return view('articles.show',[
@@ -57,6 +60,13 @@ class PostsController extends Controller
        // return dd($articles);
     }
 
+    public function clickLike($post)
+    {
+        $article = Articles::findorfail($post); // Find our post by ID.
+        $article->increment('likes'); // Increment the value in the clicks column.
+        $article->update(); // Save our updated post.
+        return redirect()->back();
+    }
     public function create()
     {
         $tags = \App\Models\Tags::all();

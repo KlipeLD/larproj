@@ -1,3 +1,11 @@
+function changeColor(){
+    //document.body.style.background = colorArray[i];
+    document.body.style.backgroundImage = "url('t.png')"; //Если файл в корне, если путь другой, укажите путь перед t.png
+    i++;
+    if( i >= colorArray.length) {
+        i = 0;
+    }
+}
 $(document).ready(function () {
     $('#contactform').on('submit', function (e) {
         e.preventDefault();

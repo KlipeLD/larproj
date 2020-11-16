@@ -2,7 +2,7 @@
     <div id="wrapper">
         <div id="page" class="container">
             <H1 class="heading has-text-weight-bold is-size-3">Add your comment</H1>
-            <form method="post" id="contactform" action="/articles/{{$article->id}}">
+            <form method="post" id="contactform"  action="/articles/{{$article->id}}">
                 @csrf
                 <div id="sendmessage">
                     Ваш комментарий успешно отправлен.
@@ -32,7 +32,7 @@
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
+                        <button class="button is-link" onclick="changeText();" type="submit">Submit</button>
                     </div>
                 </div>
             </form>

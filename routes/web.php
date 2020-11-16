@@ -27,6 +27,7 @@ Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show')->nam
 Route::get('/articles/{post}/edit', 'App\Http\Controllers\PostsController@edit');
 Route::put('/articles/{post}', 'App\Http\Controllers\PostsController@update');
 Route::post('/articles/{post}', 'App\Http\Controllers\CommentsController@store',);
+Route::get('/articles/{post}/like', 'App\Http\Controllers\PostsController@clickLike');
 
 
 
