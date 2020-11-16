@@ -142,13 +142,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/comments" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\larproj\resources\views\comments" />
       <recent name="C:\xampp\htdocs\larproj\resources\views\tags" />
       <recent name="C:\xampp\htdocs\larproj\resources\views\articles" />
     </key>
@@ -172,7 +173,8 @@
       <workItem from="1604508308183" duration="76065000" />
       <workItem from="1605132841342" duration="250000" />
       <workItem from="1605133400650" duration="10661000" />
-      <workItem from="1605226770947" duration="23316000" />
+      <workItem from="1605226770947" duration="26607000" />
+      <workItem from="1605467211025" duration="17088000" />
     </task>
     <servers />
   </component>
@@ -184,6 +186,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="409" y="140" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1604878237852" />
+    <state x="698" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605479333453">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="698" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605479333453" />
     <state x="420" y="93" key="FileChooserDialogImpl" timestamp="1605133685550">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

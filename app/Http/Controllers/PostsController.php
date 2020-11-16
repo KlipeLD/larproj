@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+//use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Articles;
+use App\Models\Comments;
 
 class PostsController extends Controller
 {
@@ -16,11 +17,18 @@ class PostsController extends Controller
         $post1 = Articles::where('id', $post)
             ->orWhere('slug', $post)
            ->firstOrFail();
+
+        $articles = \App\Models\Comments::latest()
+            ->where('articles_id', $post1->id)
+            ->orderBy('created_at')
+            ->simplePaginate(200);
+        // $articles = \App\Models\Articles::latest()->get()->paginate(6);
+
         //$article = Articles::findorFail($post);
-        //$post = Articles::where('slug', $post)->first();
-        //return view('articles.show')->with('article', $post1);
-        //return view('articles.show',['article'=>$post1]);
-        return view('articles.show',['article' =>$post1]);
+        return view('articles.show',[
+            'article' =>$post1,
+            'comments' =>$articles
+        ]);
     }
 
     public function index()
@@ -86,4 +94,5 @@ class PostsController extends Controller
             'tags' => 'exists:tags,id'
         ]);
     }
+
 }

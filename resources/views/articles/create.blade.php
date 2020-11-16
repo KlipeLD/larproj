@@ -19,6 +19,7 @@
                     @error('title')
                         <p class="help is-danger">{{$errors->first('title')}}</p>
                     @enderror
+                </div>
                 <div class="field">
                     <label class="label" for="short_body">Excerpt</label>
                 </div>

@@ -26,6 +26,7 @@ Route::get('/articles/create', 'App\Http\Controllers\PostsController@create');
 Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show')->name('articles.show');
 Route::get('/articles/{post}/edit', 'App\Http\Controllers\PostsController@edit');
 Route::put('/articles/{post}', 'App\Http\Controllers\PostsController@update');
+Route::post('/articles/{post}', 'App\Http\Controllers\CommentsController@store',);
 
 
 
