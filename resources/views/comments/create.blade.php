@@ -1,9 +1,83 @@
 <hr>
-    <div id="wrapper">
+<script>
+    function showViews()
+    {
+        $.ajax({
+            url: "/views",
+            cache: false,
+            data: {text: document.location.pathname},
+            success: function(html){
+                $("#views").html(html);
+            }
+        });
+    }
+    function showLikes()
+    {
+        $.ajax({
+            url: "/likes",
+            cache: false,
+            data: {text: document.location.pathname},
+            success: function(html){
+                $("#likes").html(html);
+            }
+        });
+    }
+    function changeComment()
+    {
+        $.ajax({
+            url: "/changeComment",
+            cache: false,
+            success: function(html){
+                $("#comment").html(html);
+            }
+        });
+    }
+    function changeLike()
+    {
+        $.ajax({
+            url: "/clicklike",
+            cache: false,
+            data: {text: document.location.pathname },
+            success: function(html)
+            {
+                $("#likes").html(html);
+            }
+        });
+    }
+    $(document).ready(function(){
+        showViews();
+        showLikes();
+        setInterval('showViews()',1000);
+        setInterval('showLikes()',1000);
+        $('#contactform').on('submit', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'POST',
+                url: '/addcomment',
+                data: $('#contactform').serialize(),
+                success: function (data) {
+                    if (data.result) {
+                        $('#senderror').hide();
+                        $('#sendmessage').show();
+                    } else {
+                        $('#senderror').show();
+                        $('#sendmessage').hide();
+                    }
+                },
+                error: function () {
+                    $('#senderror').show();
+                    $('#sendmessage').hide();
+                }
+            });
+        });
+    });
+</script>
+    <div id="comment">
         <div id="page" class="container">
             <H1 class="heading has-text-weight-bold is-size-3">Add your comment</H1>
-            <form method="post" id="contactform"  action="/articles/{{$article->id}}">
-                @csrf
+            <form id="contactform" method="POST" class="validateform">
+                {{ csrf_field() }}
                 <div id="sendmessage">
                     Ваш комментарий успешно отправлен.
                 </div>
@@ -32,7 +106,7 @@
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link" onclick="changeText();" type="submit">Submit</button>
+                        <button class="button is-link"  type="submit">Submit</button>
                     </div>
                 </div>
             </form>

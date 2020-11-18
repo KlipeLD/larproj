@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-//use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
@@ -60,12 +59,35 @@ class PostsController extends Controller
        // return dd($articles);
     }
 
-    public function clickLike($post)
+    public function clickLikes()
     {
-        $article = Articles::findorfail($post); // Find our post by ID.
-        $article->increment('likes'); // Increment the value in the clicks column.
-        $article->update(); // Save our updated post.
-        return redirect()->back();
+        $slug  = $_GET['text'];
+        $pieces = explode("/", $slug);
+        $post = Articles::where('id', $pieces[2])
+            ->orWhere('slug',$pieces[2])
+            ->firstOrFail();
+        $post->increment('likes'); // Increment the value in the clicks column.
+        $post->update(); // Save our updated post.
+        return $post->likes;
+    }
+
+    public function numbLikes()
+    {
+        $slug  = $_GET['text'];
+        $pieces = explode("/", $slug);
+        $post = Articles::where('id', $pieces[2])
+            ->orWhere('slug',$pieces[2])
+            ->firstOrFail();
+        return $post->likes;
+    }
+    public function numbViews()
+    {
+        $slug  = $_GET['text'];
+        $pieces = explode("/", $slug);
+        $post = Articles::where('id', $pieces[2])
+        ->orWhere('slug',$pieces[2])
+        ->firstOrFail();
+        return $post->views;
     }
     public function create()
     {

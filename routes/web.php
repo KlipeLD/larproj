@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    $item = DB::table('main_menu')->get();
-    $name = request('name');
-    return view('welcome',compact('item'));
-});*/
+
 Route::get('/', 'App\Http\Controllers\PostsController@indexMain')->name('welcome');
 Route::get('/articles', 'App\Http\Controllers\PostsController@index')->name('articles.index');
 Route::post('/articles', 'App\Http\Controllers\PostsController@store');
@@ -27,16 +23,12 @@ Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show')->nam
 Route::get('/articles/{post}/edit', 'App\Http\Controllers\PostsController@edit');
 Route::put('/articles/{post}', 'App\Http\Controllers\PostsController@update');
 Route::post('/articles/{post}', 'App\Http\Controllers\CommentsController@store',);
-Route::get('/articles/{post}/like', 'App\Http\Controllers\PostsController@clickLike');
+Route::get('/views', 'App\Http\Controllers\PostsController@numbViews');
+Route::get('/likes', 'App\Http\Controllers\PostsController@numbLikes');
+Route::get('/clicklike', 'App\Http\Controllers\PostsController@clickLikes');
 
+//Route::post('/addcomment', 'App\Http\Controllers\CommentsController@store');
 
-
-
-Route::get('about', function () {
-    return view('about', [
-        'articles' => App\Models\Articles::take(3)->latest()->get()
-    ]);
-});
 
 Auth::routes();
 

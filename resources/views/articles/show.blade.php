@@ -4,6 +4,8 @@
     <link href="/css/comment.css" rel="stylesheet"/>
     <script src="/js/comment.js"></script>
     <script src="/js/likes.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; Charset=UTF-8">
+    <script type="text/javascript" src="/js/jquery.js"></script>
 @endsection
 @section ('content')
     <div id="wrapper">
@@ -15,9 +17,9 @@
                 </div>
                 <p><img src="/images/banner.jpg" alt="" class="image image-full" /> </p>
                 <p>{{$article->body}}</p>
-                <p>Количество просмотров: {{$article->views + 1}}</p>
-                <p>Количество лайков: {{$article->likes}}</p>
-                <p><a href="{{$article->path()}}/like"><img src="/images/elements/like.png" alt="like"  /></a></p>
+                <p>Количество просмотров: </p><p id="views"></p>
+                <p>Количество лайков: </p><p id="likes"></p>
+                <p><img onclick="changeLike();" src="/images/elements/like.png" alt="like"  /></p>
                 <p>
                     @foreach ($article->tags as $tag)
                         <a href="{{route('articles.index',['tag'=>$tag->name])}}">{{$tag->name}}</a>
