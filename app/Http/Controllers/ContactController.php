@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contacts;
 use App\Http\Controllers\SaveContactController;
+use App\Models\SDB;
+use App\Models\SFile;
 
 
 class ContactController extends Controller
@@ -13,12 +15,26 @@ class ContactController extends Controller
     {
         return view('contact.create');
     }
+    /*protected static $availableEngines = [
+        Mercedes::class => MercedesEngine::class,
+        Bmw::class => BmwEngine::class,
+    ];
+    public function make(Product $car): Contact
+    {
+        $carClass = get_class($car);
+        if (!array_key_exists(get_class($car), self::$availableEngines)) {
+            throw new CarEngineNotAvailableException();
+        }
+        $engineClass = self::$availableEngines[$carClass];
+        return (new $engineClass());
+    }*/
 
-    public function store(EventsContact $saving)
+    public function store()
     {
         $this->validateContacts();
-        //$saving = new ToDB();
-        $saving->savingMethod();
+        $contactFactory = new SDB();
+        //$phoneB = $contactFactory->saving();
+        $contactFactory->savingContact();
         return redirect(route('welcome'));
     }
 
@@ -26,8 +42,13 @@ class ContactController extends Controller
     {
         request()->validate([
             'name'=> ['required','min:3','max:255'],
-            'tel' => ['required','min:11','numeric'],
+            'tel' => ['required','min:11','max:255'],
             'body' => ['required','min:3']
         ]);
     }
+
 }
+
+
+
+

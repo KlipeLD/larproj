@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Articles;
+use App\Models\Model;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ArticlesFactory extends Factory
+class ContactFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Articles::class;
+    protected $model = Model::class;
 
     /**
      * Define the model's default state.
@@ -21,13 +21,10 @@ class ArticlesFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->sentence;
-
+        $fakedate = $this->faker->date('Y-m-d','now');
         return [
-            'user_id' => '1',
-            'title' => $title,
-            'slug' => str_slug($title),
-            'short_body' => $this->faker->sentence,
+            'name' => $this->faker->sentence,
+            'tel' => $this->faker->phoneNumber,
             'body' => $this->faker->paragraph,
             'created_at' => $fakedate,
             'updated_at' => $fakedate
