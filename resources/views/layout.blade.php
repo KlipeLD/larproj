@@ -40,7 +40,8 @@ Released   : 20140225
         <div id="menu">
             <ul>
                 <li class="{{Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/" accesskey="1" title="">Главная страница</a></li>
-                <li class="{{request()->is('articles*') ? 'current_page_item' : ''}}"><a href="/articles" accesskey="4" title="">Каталог статей</a></li>
+                <li class="{{request()->is('articles*') ? 'current_page_item' : ''}}"><a href="/articles" accesskey="2" title="">Каталог статей</a></li>
+                <li class="{{request()->is('contact*') ? 'current_page_item' : ''}}"><a href="/contact" accesskey="3" title="">Обратная связь</a></li>
             </ul>
         </div>
     </div>

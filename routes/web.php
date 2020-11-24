@@ -23,6 +23,8 @@ Route::get('/articles/{post}', 'App\Http\Controllers\PostsController@show')->nam
 Route::get('/articles/{post}/edit', 'App\Http\Controllers\PostsController@edit');
 Route::put('/articles/{post}', 'App\Http\Controllers\PostsController@update');
 Route::post('/articles/{post}', 'App\Http\Controllers\CommentsController@store',);
+Route::get('/contact', 'App\Http\Controllers\ContactController@create')->name('contact.create');
+Route::post('/contact', 'App\Http\Controllers\ContactController@store');
 Route::get('/views', 'App\Http\Controllers\PostsController@numbViews');
 Route::get('/likes', 'App\Http\Controllers\PostsController@numbLikes');
 Route::get('/clicklike', 'App\Http\Controllers\PostsController@clickLikes');
