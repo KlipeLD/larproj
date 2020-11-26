@@ -22,7 +22,7 @@ class ArticlesFactory extends Factory
     public function definition()
     {
         $title = $this->faker->sentence;
-
+        $fakedate = $this->faker->date('Y-m-d','now');
         return [
             'user_id' => '1',
             'title' => $title,
