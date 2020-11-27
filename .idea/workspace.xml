@@ -144,7 +144,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravelTest3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -152,6 +152,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\larproj\public\css" />
       <recent name="C:\xampp\htdocs\larproj\resources\views\comments" />
       <recent name="C:\xampp\htdocs\larproj\resources\views\tags" />
       <recent name="C:\xampp\htdocs\larproj\resources\views\articles" />
@@ -181,7 +182,7 @@
       <workItem from="1605713021132" duration="584000" />
       <workItem from="1606078757722" duration="29000" />
       <workItem from="1606181277626" duration="19730000" />
-      <workItem from="1606340168590" duration="8717000" />
+      <workItem from="1606340168590" duration="14330000" />
     </task>
     <servers />
   </component>
@@ -197,10 +198,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="698" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1606226905777" />
-    <state x="420" y="93" key="FileChooserDialogImpl" timestamp="1606412913868">
+    <state x="420" y="93" key="FileChooserDialogImpl" timestamp="1606430921603">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="420" y="93" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606412913868" />
+    <state x="420" y="93" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606430921603" />
     <state width="1236" height="458" key="GridCell.Tab.0.bottom" timestamp="1605224608876">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
